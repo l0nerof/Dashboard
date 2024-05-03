@@ -1,0 +1,48 @@
+.table {
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding: 3rem 3.8rem 0;
+  }
+
+  &__container {
+    margin-right: auto;
+  }
+
+  &__title {
+    color: $color-dark;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+
+  &__status {
+    color: $color-active;
+    font-size: 1.4rem;
+    margin-top: 0.7rem;
+  }
+
+  &__search {
+    position: relative;
+
+    & > svg {
+      position: absolute;
+      top: 9px;
+      left: 8px;
+      width: 2.4rem;
+      height: 2.4rem;
+      stroke: $color-grey-dark;
+    }
+
+    & > input {
+      border: none;
+      outline: none;
+      font-size: 1.4rem;
+      font-family: inherit;
+      color: $color-dark;
+      background-color: $color-grey-light;
+      border-radius: 1rem;
+      padding: 1.1rem;
+      padding-left: 4rem;
+    }
+  }
+}
