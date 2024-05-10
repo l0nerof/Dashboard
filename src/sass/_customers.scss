@@ -1,8 +1,7 @@
-.table {
+.customers {
   &__heading {
     display: flex;
     align-items: center;
-    padding: 3rem 3.8rem 0;
   }
 
   &__container {
@@ -22,27 +21,111 @@
   }
 
   &__search {
-    position: relative;
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    & > svg {
-      position: absolute;
-      top: 9px;
-      left: 8px;
-      width: 2.4rem;
-      height: 2.4rem;
-      stroke: $color-grey-dark;
-    }
+  &__button {
+    border: none;
+    background-color: transparent;
+  }
 
-    & > input {
-      border: none;
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: $color-grey-dark;
+  }
+
+  &__input {
+    border: none;
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: $color-dark;
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    padding: 1.1rem;
+    margin-left: -3rem;
+    padding-left: 4rem;
+    width: 90%;
+    transition: all 0.2s;
+
+    &:focus {
       outline: none;
-      font-size: 1.4rem;
-      font-family: inherit;
-      color: $color-dark;
-      background-color: $color-grey-light;
-      border-radius: 1rem;
-      padding: 1.1rem;
-      padding-left: 4rem;
+      width: 100%;
     }
+  }
+}
+
+.table {
+  margin-top: 4rem;
+
+  &__header {
+    font-size: 1.4rem;
+    color: $color-grey-dark;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 21px;
+    border-bottom: 1px solid $color-grey-light;
+    padding-bottom: 1.3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.8fr 1.4fr 1fr 8rem;
+    column-gap: 2rem;
+  }
+
+  // &__body {
+  // }
+
+  &__row {
+    padding: 2.4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.8fr 1.4fr 1fr 8rem;
+    column-gap: 2rem;
+    align-items: center;
+    justify-items: start;
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &__info {
+    color: $color-dark;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    &--active {
+      padding: 0.4rem 1.8rem;
+      border: 1px solid $color-active-border;
+      border-radius: 4px;
+      background-color: $color-active-shadow;
+      text-align: center;
+      color: $color-active-text;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    &--inactive {
+      padding: 0.4rem 1.2rem;
+      border: 1px solid $color-inactive-border;
+      border-radius: 4px;
+      background-color: $color-inactive;
+      text-align: center;
+      color: $color-inactive-border;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
+  // &__footer {
+  // }
+}
+
+.pagination {
+  margin-top: 3.2rem;
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color-grey-dark;
   }
 }

@@ -4,13 +4,13 @@ import avatar from "../user.jpg";
 
 function Sidebar() {
   return (
-    <header className="sidebar">
-      <div className="sidebar__container">
+    <div className="sidebar">
+      <header className="sidebar__container">
         <svg className="logo">
           <use href={sprite + "#icon-setting"} />
         </svg>
         <h1 className="sidebar__title">Dashboard</h1>
-      </div>
+      </header>
 
       <nav>
         <ul className="sidebar__list">
@@ -35,12 +35,12 @@ function Sidebar() {
         </ul>
       </nav>
 
-      <div className="sidebar__footer">
+      <footer className="sidebar__footer">
         <img src={avatar} alt="Avatar" className="sidebar__avatar" />
         <p className="sidebar__username">Vova Bondar</p>
         <p className="sidebar__role">Developer</p>
-      </div>
-    </header>
+      </footer>
+    </div>
   );
 }
 
